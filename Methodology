@@ -1,0 +1,243 @@
+# Methodology
+
+## 1. Purpose
+
+This methodology explains how the vehicle digital forensic reconstruction was conducted from an E01 forensic image analyzed with Autopsy.
+
+The objective was to correlate extracted vehicle artifacts and recovered media to reconstruct an eleven-run operation, identify repeated movement patterns, map actor/device relationships, and test whether the declared cargo narrative matched the vehicle’s internal telemetry.
+
+## 2. Evidence Source
+
+The original evidence source was an E01 forensic image. The image was analyzed using Autopsy to extract structured records, recovered media, and timeline artifacts.
+
+The repository does not include the original E01 file. Only sanitized CSV extracts, redacted exhibits, and derived visuals should be uploaded for public demonstration.
+
+## 3. Tooling
+
+| Tool / source | Use |
+|---|---|
+| Autopsy | Primary forensic extraction and artifact review |
+| CSV exports | Structured analysis of vehicle artifacts |
+| Recovered images | Visual corroboration of routes, stops, receipts, and events |
+| Python / spreadsheet tools | Data cleaning, correlation, and visual generation |
+| Manual forensic review | Timeline validation and interpretation |
+
+## 4. Artifact Categories Reviewed
+
+| Artifact category | Forensic purpose |
+|---|---|
+| GPS tracks | Reconstruct route movement and stop locations |
+| Raw NMEA data | Validate location movement and timing |
+| Route history | Identify saved, repeated, or deleted navigation routes |
+| Destinations | Map recurring operational locations |
+| Bluetooth paired devices | Identify recurring nearby devices and convoy correlation |
+| Keyfob/cargo-door logs | Identify loading and transfer windows |
+| Suspension logs | Measure outbound and return load differences |
+| OBD snapshots | Compare speed, throttle, RPM, and load behavior |
+| DTC logs | Identify mechanical overload fault patterns |
+| EDR events | Identify emergency braking and checkpoint/intercept events |
+| Deleted messages | Recover instructions, warnings, cover story, and concealment behavior |
+| Call logs and contacts | Support actor and role mapping |
+| POI searches | Identify route, border, or deletion-related search behavior |
+| USB/system events | Identify export or deletion attempts |
+| Recovered images and receipts | Corroborate movement, stops, fuel events, tolls, manifests, and final-run activity |
+
+## 5. Extraction Workflow
+
+```text
+E01 forensic image
+        ↓
+Autopsy case creation
+        ↓
+Artifact parsing and media recovery
+        ↓
+CSV export of structured logs
+        ↓
+Image/receipt extraction
+        ↓
+Timestamp normalization
+        ↓
+Evidence correlation
+        ↓
+Run-by-run reconstruction
+        ↓
+Findings, visuals, and public redaction
+```
+
+## 6. Data Preparation
+
+CSV files exported from Autopsy were reviewed and renamed into clean forensic categories. Before public release, sensitive fields should be sanitized.
+
+| Sensitive field | Public replacement |
+|---|---|
+| Names | `Subject_01`, `Coordinator_01`, `Convoy_01` |
+| Phone numbers | `PHONE_01`, `PHONE_02` |
+| Vehicle plates | `VEHICLE_01`, `VEHICLE_02` |
+| Exact GPS coordinates | Rounded coordinates or general location labels |
+| Account/card numbers | Removed or masked |
+| Receipt numbers | Removed or masked |
+| VIN/device identifiers | Redacted |
+| Message content | Kept only when necessary, shortened, or paraphrased |
+
+## 7. Timeline Reconstruction
+
+The eleven-run timeline was reconstructed by grouping records by date, time, route stage, and repeated event sequence.
+
+Each run was reviewed for the following event pattern:
+
+1. Vehicle boot/session activity
+2. Pre-run communication or preparation
+3. Warehouse B4 arrival
+4. Cargo-door unlock/open event
+5. Route departure toward Aflao
+6. Sogakope rest/refuel stop
+7. Bluetooth convoy device activity
+8. Aflao stop or border-side event
+9. Cargo-door event at Aflao
+10. Return leg to Tema
+11. Suspension load increase and/or DTC activity
+12. Deleted messages, route deletion, or system activity
+
+A run was treated as corroborated when multiple independent artifact types supported the same sequence.
+
+## 8. Correlation Method
+
+The case was not interpreted from a single file or artifact. Findings were based on cross-source correlation.
+
+| Finding | Correlated evidence |
+|---|---|
+| Warehouse loading | Cargo-door log, GPS location, recovered image, message instruction |
+| Convoy movement | Bluetooth pairings, recovered images, messages, route timing |
+| Sogakope coordination | GPS stop, fuel receipts, Bluetooth disconnect/reconnect, visual evidence |
+| Aflao transfer window | GPS stop, cargo-door unlock, route history, recovered image |
+| Heavy return load | Suspension readings, OBD data, DTC C1A00, slower return speed |
+| Cover story conflict | Manifest weight, suspension load, messages, return-leg anomaly |
+| Post-event concealment | Deleted messages, USB insertion, route deletion/export behavior |
+
+## 9. Load Discrepancy Analysis
+
+Suspension logs and OBD snapshots were used to compare outbound and return load readings for each run.
+
+The analysis focused on:
+
+- outbound load before/after Warehouse B4,
+- return load after Aflao,
+- difference between outbound and return load,
+- repeated C1A00 suspension overload records,
+- return-leg speed reduction,
+- and consistency across all eleven runs.
+
+The key finding was that outbound loads ranged from approximately 284 to 357 kg, while return loads ranged from approximately 671 to 836 kg. This produced a repeated unexplained return-load increase across the operation.
+
+## 10. Bluetooth and Actor Mapping
+
+Bluetooth records were used to identify recurring device proximity.
+
+Devices were mapped by:
+
+1. repeated appearance across multiple runs,
+2. timing of connection and disconnection,
+3. proximity to operational nodes,
+4. supporting call/contact records,
+5. recovered messages,
+6. and recovered images showing convoy presence.
+
+Recurring devices were interpreted as support roles only when the timing and location aligned with the operational sequence.
+
+## 11. Visual Evidence Review
+
+Recovered images were treated as corroborating evidence, not standalone proof.
+
+The images were used to validate:
+
+- Warehouse B4 loading activity,
+- convoy presence,
+- Sogakope rest/refuel stops,
+- Aflao border activity,
+- checkpoint/intercept events,
+- fuel receipts,
+- toll receipts,
+- ATM/pre-run activity,
+- and declared manifest documents.
+
+Before publication, all images should be redacted to remove names, plates, coordinates, account numbers, receipt identifiers, and other personal or sensitive data.
+
+## 12. Run 11 Takedown Reconstruction
+
+Run 11 was reconstructed as the final operational sequence.
+
+The final run included:
+
+1. cash withdrawal,
+2. pre-departure fuel,
+3. Warehouse B4 loading activity,
+4. checkpoint/emergency braking event,
+5. Sogakope convoy stop,
+6. Aflao stop,
+7. cargo-door unlock event,
+8. deleted messages,
+9. and attempted route export/deletion activity.
+
+This run was treated as critical because it combined normal operational behavior with post-event concealment indicators.
+
+## 13. Validation Approach
+
+Each major conclusion was checked against at least two independent evidence categories where possible.
+
+For example:
+
+- The route was validated through GPS, route history, toll receipt, and recovered images.
+- Convoy presence was validated through Bluetooth logs, messages, and recovered images.
+- The cargo story was tested against manifests, suspension logs, and DTC records.
+- Run 11 was validated through receipts, EDR data, keyfob logs, images, messages, and USB/system records.
+
+This reduced dependence on any single artifact.
+
+## 14. Limitations
+
+This public repository is a sanitized case study. It does not include the full E01 image or all raw artifacts.
+
+Limitations include:
+
+- possible redaction of identifying fields,
+- possible rounding of coordinates,
+- absence of full forensic image verification data in the public release,
+- dependence on exported Autopsy artifacts,
+- and the need to preserve privacy and legal sensitivity.
+
+The public version should therefore be treated as a portfolio and training reconstruction, not a full evidentiary disclosure package.
+
+## 15. Reproducibility Notes
+
+To reproduce the analysis from the public repository:
+
+1. Review `data_sanitized/`.
+2. Compare run dates and timestamps across the CSVs.
+3. Use `suspension_log_sanitized.csv` to calculate load differences.
+4. Use `route_history_sanitized.csv` and `gps_track_sanitized.csv` to validate the route.
+5. Use `paired_devices_sanitized.csv` to identify recurring devices.
+6. Use `keyfob_log_sanitized.csv` to identify cargo-door events.
+7. Use `messages_sanitized.csv` for operational instructions and concealment indicators.
+8. Use `exhibits_redacted/` for visual corroboration.
+9. Use `visuals/` for summary charts and presentation graphics.
+
+## 16. Ethical and Legal Handling
+
+Vehicle forensic data can include personal, financial, location, and behavioral information. The public version must protect privacy.
+
+The recommended public-release approach is:
+
+- do not upload the original E01 image,
+- do not upload raw unredacted CSVs,
+- do not expose exact GPS coordinates,
+- do not publish real phone numbers or account numbers,
+- redact plates, names, and receipts,
+- and clearly label the repository as an educational/portfolio case study.
+
+## 17. Summary
+
+The methodology followed a multi-artifact correlation approach.
+
+The investigation moved from extraction to timeline reconstruction, then to route validation, convoy mapping, load-discrepancy analysis, visual corroboration, and final interpretation.
+
+The central forensic lesson is clear: modern vehicles preserve a wide range of digital and mechanical traces. When those traces are correlated carefully, they can reconstruct far more than movement. They can expose logistics, coordination, concealment, and operational intent.
