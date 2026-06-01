@@ -180,6 +180,8 @@ When correlated properly, these artifacts can reconstruct a full operational tim
 
 ## Disclaimer
 
-This repository is shared for digital forensic education and portfolio demonstration. The analysis is based on artifacts extracted from an E01 forensic image using Autopsy. Sensitive identifiers, personal information, exact coordinates, financial details, vehicle registrations, and operationally sensitive data should be anonymized or redacted before publication.
+This repository is shared for digital forensic education and portfolio demonstration. The analysis is based on artifacts extracted from an E01 forensic image using Autopsy. Sensitive identifiers, personal information, exact coordinates, financial details, vehicle registrations, and operationally sensitive data are fictional.
 
 The original E01 forensic image is not included in this repository.
+
+Isaac Akpabli
