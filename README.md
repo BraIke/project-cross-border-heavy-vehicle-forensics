@@ -6,7 +6,7 @@ This repository presents a vehicle digital forensics case study reconstructed fr
 
 The case centers on an eleven-run operation along the Tema to Sogakope to Aflao corridor. On paper, the vehicle appeared to support textile transportation. However, internal vehicle data showed a repeated return-leg load anomaly that contradicted the declared cargo narrative.
 
-> Public release note: identifiers, exact coordinates, account details, phone numbers, vehicle registrations, and other sensitive fields are ficional.
+> Public release note: identifiers, exact coordinates, account details, phone numbers, vehicle registrations, and other sensitive fields are fictional.
 
 ## Case Identity
 
