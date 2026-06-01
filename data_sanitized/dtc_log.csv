@@ -1,7 +1,0 @@
-"id","timestamp","dtc_code","description","severity","status","cleared_ts","cleared_by"
-"1","2024-10-12T01:05:00Z","C1A00","Rear Suspension Overload — Leaf Spring Load Exceeded","MEDIUM","CLEARED","2024-10-12T03:18:00Z","AUTO"
-"2","2024-10-26T01:05:00Z","C1A00","Rear Suspension Overload — Leaf Spring Load Exceeded","MEDIUM","CLEARED","2024-10-26T03:18:00Z","AUTO"
-"3","2024-11-01T01:05:00Z","C1A00","Rear Suspension Overload — Leaf Spring Load Exceeded","MEDIUM","CLEARED","2024-11-01T03:18:00Z","AUTO"
-"4","2024-11-23T01:05:00Z","C1A00","Rear Suspension Overload — Leaf Spring Load Exceeded","MEDIUM","CLEARED","2024-11-23T03:18:00Z","AUTO"
-"5","2024-12-07T01:05:00Z","C1A00","Rear Suspension Overload — Leaf Spring Load Exceeded","MEDIUM","CLEARED","2024-12-07T03:18:00Z","AUTO"
-"6","2024-12-14T01:05:00Z","C1A00","Rear Suspension Overload — Leaf Spring Load Exceeded","MEDIUM","CLEARED","2024-12-14T03:18:00Z","AUTO"
