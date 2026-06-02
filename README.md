@@ -60,14 +60,14 @@ project-cross-border-heavy/
 ├── findings-report.md
 |
 ├── data_sanitized/
-│   ├── gps_track_sanitized.csv
-│   ├── route_history_sanitized.csv
-│   ├── paired_devices_sanitized.csv
-│   ├── keyfob_log_sanitized.csv
-│   ├── suspension_log_sanitized.csv
-│   ├── edr_events_sanitized.csv
-│   ├── messages_sanitized.csv
-│   └── usb_events_sanitized.csv
+│   ├── gps_track.csv
+│   ├── route_history.csv
+│   ├── paired_devices.csv
+│   ├── keyfob_log.csv
+│   ├── suspension_log.csv
+│   ├── edr_events.csv
+│   ├── messages.csv
+│   └── usb_events.csv
 |
 ├── exhibits/
 │   ├── warehouse_b4_loading.jpg
