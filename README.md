@@ -69,15 +69,15 @@ project-cross-border-heavy/
 │   ├── messages_sanitized.csv
 │   └── usb_events_sanitized.csv
 |
-├── exhibits_redacted/
-│   ├── warehouse_b4_loading_redacted.jpg
-│   ├── sogakope_convoy_cctv_redacted.jpg
-│   ├── aflao_crossing_run11_redacted.jpg
-│   ├── manifest_cover_run01_redacted.jpg
-│   ├── shell_sogakope_run11_redacted.jpg
-│   ├── shell_tema_predeparture_run11_redacted.jpg
-│   ├── checkpoint_run11_redacted.jpg
-│   └── n1_toll_run01_redacted.jpg
+├── exhibits/
+│   ├── warehouse_b4_loading.jpg
+│   ├── sogakope_convoy_cctv.jpg
+│   ├── aflao_crossing_run11.jpg
+│   ├── manifest_cover_run01.jpg
+│   ├── shell_sogakope_run11.jpg
+│   ├── shell_tema_predeparture_run11.jpg
+│   ├── checkpoint_run11.jpg
+│   └── n1_toll_run01.jpg
 |
 └── visuals/
     ├── load_discrepancy_chart.png
